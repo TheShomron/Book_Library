@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Book_Manage.Info_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Book_Manage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/9691.jpg"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Center" Height="629" VerticalAlignment="Center" Width="987" Stroke="Black" StrokeDashCap="Round">
+            <Rectangle.FocusVisualPrimaryBrush>
+                <ImageBrush/>
+            </Rectangle.FocusVisualPrimaryBrush>
+            <Rectangle.Fill>
+                <AcrylicBrush TintColor="#FF86AF9C" FallbackColor="#FF4C626E" TintOpacity="0.25" Opacity="0.8"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock x:Name="Info_Box" HorizontalAlignment="Left" Height="561" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="844" FontFamily="Algerian" TextAlignment="Center" FontSize="24" Margin="214,0,0,0"/>
+        <Button Content="&lt;=" Height="42" Margin="10,318,0,0" VerticalAlignment="Top" Width="103" Click="Return_Btn_Click" FontSize="26" FontFamily="Algerian"/>
+
+    </Grid>
+</Page>

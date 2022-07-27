@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="Book_Manage.Option_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Book_Manage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/10930.jpg"/>
+        </Grid.Background>
+
+        <Rectangle x:Name="Rect_Showing" HorizontalAlignment="Left" Height="279" Margin="357,94,0,0" VerticalAlignment="Top" Width="878" FocusVisualPrimaryBrush="FloralWhite">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF84A696" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <AcrylicBrush BackgroundSource="Backdrop" TintColor="#FFE3EED0" FallbackColor="#FF84A696" AlwaysUseFallback="False" TintOpacity="0.2"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ListView x:Name="Showing_Screen" HorizontalAlignment="Left" Height="255" Margin="369,105,0,0" VerticalAlignment="Top" Width="855" DoubleTapped="Showing_Screen_DoubleTapped"/>
+        <TextBlock x:Name="header" HorizontalAlignment="Left" Height="60" Margin="438,20,0,0" TextWrapping="Wrap" Text="Inventory" VerticalAlignment="Top" Width="684" FontSize="56" TextAlignment="Center" FontFamily="Algerian" FontWeight="Normal" TextDecorations="Underline" RenderTransformOrigin="0.766,0.721"/>
+        <Button x:Name="Add_Btn" Content="Add Item" Height="57" Margin="1040,404,0,0" VerticalAlignment="Top" Width="206" FontSize="26" Click="Add_Btn_Click" FontFamily="Algerian">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDFECD0"/>
+                    <GradientStop Color="#FF85A796" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF83A595" Offset="0.995"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="Remov_Btn" Content="Remove Item" Height="57" Margin="1039,473,0,0" VerticalAlignment="Top" Width="207" FontSize="26" FontWeight="Normal" Click="Remov_Btn_Click" FontFamily="Algerian">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDBE8CA"/>
+                    <GradientStop Color="#FF86A897" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF84A696" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="Update_Btn" Content="Update Item" Height="54" Margin="368,475,0,0" VerticalAlignment="Top" Width="206" Click="Update_Btn_Click" FontSize="26" FontWeight="Normal" FontFamily="Algerian">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FFBDD1B8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE0EED0"/>
+                    <GradientStop Color="#FF98BDB4" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <ComboBox x:Name="Sort_ComboBox" Height="53" Margin="608,401,0,0" Width="383" SelectionChanged="Sort_ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Sort By Price" IsSelected="True"/>
+            <ComboBoxItem Content="Sort By Date"/>
+            <ComboBoxItem Content="Sort By A-Z"/>
+            <ComboBoxItem Content="Only Books"/>
+            <ComboBoxItem Content="Only Journal"/>
+        </ComboBox>
+        <Button x:Name="Buy_Btn_Copy" Content="Buy Item" Height="57" Margin="369,403,0,0" VerticalAlignment="Top" Width="206" FontSize="26" Click="Buy_Btn_Copy_Click" FontFamily="Algerian">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDFECD0"/>
+                    <GradientStop Color="#FF85A796" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF83A595" Offset="0.995"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="Borrow_Btn_Copy" Content="Borrow Item" Height="57" Margin="69,472,0,0" VerticalAlignment="Top" Width="206" FontSize="26" FontFamily="Algerian" Click="Borrow_Btn_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDFECD0"/>
+                    <GradientStop Color="#FF85A796" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF83A595" Offset="0.995"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Rectangle x:Name="Rect_Showing_Copy" HorizontalAlignment="Left" Height="305" Margin="36,154,0,0" VerticalAlignment="Top" Width="271" FocusVisualPrimaryBrush="FloralWhite">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF84A696" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <AcrylicBrush BackgroundSource="Backdrop" TintColor="#FFE3EED0" FallbackColor="#FF84A696" AlwaysUseFallback="False" TintOpacity="0.2"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ListView x:Name="BorrowScren_view" HorizontalAlignment="Left" Height="279" Margin="40,166,0,0" VerticalAlignment="Top" Width="265" DoubleTapped="BorrowScren_view_DoubleTapped"/>
+        <TextBlock x:Name="Borrow_header" HorizontalAlignment="Left" Height="60" Margin="16,98,0,0" TextWrapping="Wrap" Text="Borrowed" VerticalAlignment="Top" Width="302" FontSize="36" TextAlignment="Center" FontFamily="Algerian" FontWeight="Normal" TextDecorations="Underline" RenderTransformOrigin="0.766,0.721" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="-0.161"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="Return_Btn" Content="Return Item" Height="57" Margin="69,534,0,0" VerticalAlignment="Top" Width="206" FontSize="26" FontFamily="Algerian" Click="Return_Btn_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDFECD0"/>
+                    <GradientStop Color="#FF85A796" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1EED0"/>
+                    <GradientStop Color="#FF83A595" Offset="0.995"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+
+    </Grid>
+</Page>
