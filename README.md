@@ -4,7 +4,7 @@ In this project I created a software that aims to serve as a manager of a librar
 
 ![mainpage](https://user-images.githubusercontent.com/108794115/189875805-970bcd80-bc06-4fb7-8936-23573d7e2248.jpeg)
 
-🗄️Features:
+🐋Features:
 * Adding a book or journal.
 * Update an item that is in the database.
 * Deleting an item that is in the database.
@@ -15,4 +15,4 @@ In this project I created a software that aims to serve as a manager of a librar
 ![OptionPage](https://user-images.githubusercontent.com/108794115/189878175-f670ba1f-9de8-4dfb-9a4f-986ead172d55.jpeg)
 ![InfoPage](https://user-images.githubusercontent.com/108794115/189878201-0cefe6b4-69dc-4493-923a-392ae95103c4.jpeg)
 
-
+Hope you found this project useful and also thanks for being here, I appreciate it 🙏.
